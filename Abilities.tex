@@ -54,99 +54,134 @@
 \newcounter{money}
 \newcounter{casterlevel}
 
-\newcommand{\charname}{NAME}
-\newcommand{\charrace}{RACE}
-\newcommand{\charclass}{CLASS LVL}
-\newcommand{\charalignment}{F}
+\newcommand{\charname}{Xestilophon}
+\newcommand{\charrace}{Aerieborn Halfling}
+\newcommand{\charclass}{Ranger (Infiltrator, Divine Tracker 9)}
+\newcommand{\charalignment}{NG}
 \newcommand{\charsex}{Male}
-\newcommand{\charsize}{Medium}
-\setcounter{sizemod}{0}
-\newcommand{\chartype}{Humanoid (SUBTYPE)}
-\newcommand{\charheight}{10'2``}
+\newcommand{\charsize}{Small}
+\setcounter{sizemod}{-1}
+\newcommand{\chartype}{Humanoid (Shapechanger)}
+\newcommand{\charheight}{2'8``}
 \newcommand{\charweight}{15.42kg/38lb}
 \newcommand{\charhair}{Black}
 \newcommand{\chareyes}{Red}
-\setcounter{age}{5}
+\setcounter{age}{35}
 
 \setcounter{xp}{0}
 \setcounter{ecl}{1}
 
-\setcounter{totalhp}{21}
-\setcounter{currenthp}{21}
-\newcommand{\speed}{15', 3sq (medium load)}
+\setcounter{totalhp}{76}
+\setcounter{currenthp}{76}
+\newcommand{\speed}{30', 6sq (medium load)}
 
-\setcounter{str}{5} % -4
-\setcounter{dex}{12} % 2
-\setcounter{con}{14} % 2
-\setcounter{int}{14} % 5
-\setcounter{wis}{8} % -2
-\setcounter{cha}{20} % 17
+                     %       Racial   4th  Belt
+\setcounter{str}{14} % 5
+\setcounter{dex}{22} % 10     +2*     +1    +2
+\setcounter{con}{12} % 2
+\setcounter{int}{10} % 0
+\setcounter{wis}{16} % 2      +2            +2
+\setcounter{cha}{9}  % 1      -2
 
 
-\setcounter{acnatural}{0}
-\setcounter{acarmour}{2}
+\setcounter{acnatural}{1}
+\setcounter{acarmour}{5}
 \setcounter{acmaxdex}{6} %maximum dexterity modifier armour allows. Use a high number for none
 
-\setcounter{basefort}{0}
-\setcounter{baseref}{0}
-\setcounter{basewill}{2}
-\setcounter{resistancesave}{0}
-\setcounter{bab}{1}
+\setcounter{basefort}{6}
+\setcounter{baseref}{6}
+\setcounter{basewill}{3}
+\setcounter{resistancesave}{1}
+\setcounter{bab}{9}
 \setcounter{spellresistance}{0}
 
 \setcounter{cmdmisc}{\value{acdeflect}}
 
 \newcommand{\feats}{
- Combat Reflexes\\
+ Endurance$^{b}$, Weapon Focus (Bow)$^{1st}$, Point Blank Shot$^{2nd}$, Precise Shot$^{3rd}$, Rapid Shot$^{5th}$,
+ Improved Precise Shot$^{6th}$, Deadly Aim$^{7th}$
 }
 
 \newcommand{\traits}{
-Extremely Fashionable \\
-Patient Optimist (+2 to diplomacy to change attitude of unfriendly or hostile, may retry once) \\
+Undead Crusader (+1 damage vs undead, +1 Know(religion)), Magical Knack \\
 }
 \newcommand{\specialabilities}{
-Low-light vision \\
-1/day dancing lights \\
-1/day ghost sound \\
-1/day prestigitiation \\
-1/day speak with animals \\
-1/day reroll natural 1 on 1d20 \\
-8/day Summon Monster I \\
-Fused Eidolon
-Fused Link
+Low-light vision 
+1/day Speak with Animals, 1/day Feather Fall
+Animal Minded (+2 perception/sense motive)
+When shifting: +2 dex, one of (bite 1d6, two talons 1d4, +4 perception, +1 Natural Armour) \\
+Combat Style (archery), Swift Tracker
+Favoured Enemy (Undead +4), Outsider (evil +2), Woodland Stride. \\
+90min/day: Adaptation (darkvision 60 ft., Fire resistance 5, Great Fortitude, Iron Will, Lightning Reflexes, natural armor (+2). Skill Focus (Stealth))
+Blessings (su; no AoO) (Liberation, Luck) (3+level per day): Liberation (minor): At first level, for one round as a swift
+action, you can ignore impediments to your mobility and effects that cause paralysis (as freedom of movement). You can
+activate this blessing even if you're otherwise unable to take actions, but not if you're unconscious. \\
+Lucky Presence (minor): At 1st level, you can touch an ally and grant it a lucky presence. The target of this luck
+can call upon it to roll any one ability check, attack roll, saving throw, or skill check twice and take the better result.
+The decision to use this ability must be made before the roll is made. Once used, the effect ends. \\ Evasion
 }
 
 \newcommand{\conditionalmods}{
-+2 Vs Enchantment\\
 }
 \newcommand{\languages}{
-Common, Kelish, Gnome, Varision \\
+Common, Halfling, Ancient Osirion, Draconic \\
 }
-\setcounter{lightload}{16}
-\setcounter{medload}{33}
+\setcounter{lightload}{43}
+\setcounter{medload}{87}
 \setcounter{heavyload}{\value{lightload} + \value{medload}}
 
-\setcounter{money}{0}
+\setcounter{money}{4273}
 
 \newcommand{\conditionalspellmods}{
 }
 
-\setcounter{casterlevel}{2}
+\setcounter{casterlevel}{8}  % Level - 3 + 2 (Magical Knack)
 
 \newcommand{\spellsknown}{
-\begin{compactenum}
-\item [1st] \spell{Rejuvinate Eidolon [lesser]}, \spell{Grease}, \spell{Mage Armor}
-\item [0]   \spell{Guidance}, \spell{Detect Magic}, \spell{Mage Hand}, \spell{Message}, \spell{Acid Splash}
-\end{compactenum}
 }
 
 \newcommand{\domains}{
 None
 }
 \newcommand{\notes}{
-0/4 Prestige
+Good Dreams (Desna): Your dreams often give you
+a hint of possible dangers you might face during your
+day-such as a fall, a blast of fire, or a poisonous snake-
+and this hint sometimes makes all the difference. Each
+time you sleep, the GM tells you of a dangerous dream
+you had. Once per day, if you have to make a saving throw
+against a threat related or similar to that dream, you can
+roll twice and take the more favorable result. If you do
+not encounter circumstances similar to the threat or
+situation you dreamed, this trait has no effect that day. If
+you have the Halfling Jinx trait (see page 27), you cannot
+select this trait, and vice versa.
+
+Change Shape (Su, 5 RP): A skinwalker can change shape into a bestial form as a standard action. In bestial form, a skinwalker gains a +2
+racial bonus to either Dexterity (already included in stats). While in this form, a skinwalker also takes on an animalistic feature that 
+provides a special effect. Each time a skinwalker assumes bestial form, she can choose to gain one of the following features:
+\begin{itemize}
+ \item 2 claw attacks that each deal 1d4 points of damage
+ \item Darkvision to a range of 60 feet.
+ \item +1 racial bonus to natural armor.
+\end{itemize}
+The racial ability score bonus and additional feature last as long as the skinwalker remains in that form, and a skinwalker can remain in
+bestial form for as long as she wants. While in bestial form, a skinwalker takes a -4 penalty on Charisma and Charisma-based checks when 
+interacting with humanoids that lack the shapechanger subtype.
+
+A skinwalker can return to her humanoid form as a swift action. To change forms and gain a different benefit, a skinwalker must first return 
+to her humanoid form then use her shapechange ability again. A skinwalker can shapechange into bestial form a number of times per day equal
+to 3 + 1/2 her character level.
+
+Typical spell preparation:
+\begin{compactenum}
+\item [2nd] \spell{Raven's Flight}, \spell{Spike Growth}  % Replace in sandy situations
+\item [1st] \spell{Aspect of the Falcon}, \spell{Resist Energy}, \spell{Liberating command}  % At level 8, add Resist Energy
+\end{compactenum}
 }
 \newcommand{\people}{
+Deaconess Sekek - Priestess of Nethys; gatekeeper of the librarian. \\
+Scorpion-Centaur
 }
 
 
